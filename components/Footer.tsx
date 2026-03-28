@@ -1,9 +1,26 @@
 import { useRouter } from 'next/router';
 import styles from './Footer.module.css';
+import { trackAddToCart } from '@/lib/tracking';
 
 export default function Footer() {
   const router = useRouter();
   const locale = (router.query.locale as string) || 'id';
+
+  const handleWAClick = () => trackAddToCart({
+    content_name: 'WhatsApp Contact Footer',
+    content_id: 'footer-wa',
+    content_type: 'contact',
+    destination: 'whatsapp',
+    destination_url: 'https://wa.me/6285732740006',
+  });
+
+  const handleTelegramClick = () => trackAddToCart({
+    content_name: 'Telegram Bot Footer',
+    content_id: 'footer-telegram',
+    content_type: 'cta_telegram',
+    destination: 'telegram',
+    destination_url: 'https://t.me/berkahkarya_saas_bot',
+  });
 
   return (
     <footer className={styles.footer}>
@@ -17,8 +34,8 @@ export default function Footer() {
               : 'AI Ecosystem for Indonesian businesses. Tools, automation, and AI systems that generate results.'}
           </p>
           <div className={styles.socials}>
-            <a href="https://wa.me/6285732740006" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">💬</a>
-            <a href="https://t.me/berkahkarya_saas_bot" target="_blank" rel="noopener noreferrer" aria-label="Telegram">✈️</a>
+            <a href="https://wa.me/6285732740006" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" onClick={handleWAClick}>💬</a>
+            <a href="https://t.me/berkahkarya_saas_bot" target="_blank" rel="noopener noreferrer" aria-label="Telegram" onClick={handleTelegramClick}>✈️</a>
             <a href="mailto:hello@berkahkarya.org" aria-label="Email">📧</a>
           </div>
         </div>
@@ -40,8 +57,8 @@ export default function Footer() {
         <div>
           <h5>{locale === 'id' ? 'Kontak' : 'Contact'}</h5>
           <ul>
-            <li><a href="https://wa.me/6285732740006" target="_blank" rel="noopener noreferrer">📱 WhatsApp</a></li>
-            <li><a href="https://t.me/berkahkarya_saas_bot" target="_blank" rel="noopener noreferrer">✈️ Telegram Bot</a></li>
+            <li><a href="https://wa.me/6285732740006" target="_blank" rel="noopener noreferrer" onClick={handleWAClick}>📱 WhatsApp</a></li>
+            <li><a href="https://t.me/berkahkarya_saas_bot" target="_blank" rel="noopener noreferrer" onClick={handleTelegramClick}>✈️ Telegram Bot</a></li>
             <li><a href="mailto:hello@berkahkarya.org">📧 hello@berkahkarya.org</a></li>
           </ul>
           <div className={styles.pages}>

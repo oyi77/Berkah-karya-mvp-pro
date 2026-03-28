@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect, useState, useRef } from 'react';
 import styles from './Header.module.css';
+import { trackAddToCart } from '@/lib/tracking';
 
 interface NavItem {
   slug: string;
@@ -166,6 +167,7 @@ export default function Header() {
             target="_blank"
             rel="noopener noreferrer"
             className={styles.ctaBtn}
+            onClick={() => trackAddToCart({content_name:'Header CTA WA',content_id:'header-cta-wa',content_type:'cta_whatsapp',destination:'whatsapp',destination_url:'https://wa.me/6285732740006'})}
           >
             💬 {locale === 'id' ? 'Mulai Gratis' : 'Start Free'}
           </a>
@@ -194,6 +196,7 @@ export default function Header() {
             target="_blank"
             rel="noopener noreferrer"
             className={styles.ctaBtn}
+            onClick={() => trackAddToCart({content_name:'Header Mobile CTA WA',content_id:'header-mobile-cta-wa',content_type:'cta_whatsapp',destination:'whatsapp',destination_url:'https://wa.me/6285732740006'})}
           >
             💬 {locale === 'id' ? 'Hubungi Kami' : 'Contact Us'}
           </a>

@@ -3,6 +3,7 @@
  * URL: berkahkarya.org/admin-panel/vilona-bot
  */
 import { useState, useEffect, useCallback } from 'react';
+import { trackAddToCart } from '@/lib/tracking';
 import Head from 'next/head';
 
 const NICHES = [
@@ -172,7 +173,8 @@ export default function VilonaAdminPanel() {
           <span style={styles.navBadge}>📚 Prompt Management</span>
         </div>
         <div style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
-          <a href="https://t.me/berkahkarya_saas_bot" target="_blank" rel="noreferrer" style={styles.navLink}>
+          <a href="https://t.me/berkahkarya_saas_bot" target="_blank" rel="noreferrer" style={styles.navLink}
+            onClick={() => trackAddToCart({content_name:'Admin Panel Open Bot',content_id:'admin-open-bot',content_type:'cta_telegram',destination:'telegram',destination_url:'https://t.me/berkahkarya_saas_bot'})}>
             Open Bot ↗
           </a>
           <button style={styles.btnSm} onClick={() => { localStorage.removeItem('vb_admin_authed'); setAuthed(false); }}>
