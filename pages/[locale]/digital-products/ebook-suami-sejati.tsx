@@ -83,7 +83,7 @@ export default function EbookSuamiSejati({ locale }: { locale: Locale }) {
     trackEvent('InitiateCheckout', {
       content_name: 'ebook-suami-sejati',
       content_category: 'digital_product',
-      value: 49000,
+      value: 99000,
       currency: 'IDR',
       cta_section: section,
     });
@@ -153,7 +153,7 @@ export default function EbookSuamiSejati({ locale }: { locale: Locale }) {
               onClick={() => handleCTAClick('hero')}
               className="inline-flex items-center gap-3 px-8 py-4 bg-yellow-500 hover:bg-yellow-400 text-slate-900 font-bold text-lg rounded-full transition-all transform hover:scale-105 shadow-2xl hover:shadow-yellow-500/50"
             >
-              {isID ? '🚀 Ambil Sekarang — Rp 49.000' : '🚀 Get Now — Rp 49,000'}
+              {isID ? '🚀 Ambil Sekarang — Rp 99.000' : '🚀 Get Now — Rp 99,000'}
             </button>
 
             <p className="text-sm text-slate-400 mt-4">
@@ -493,15 +493,15 @@ export default function EbookSuamiSejati({ locale }: { locale: Locale }) {
                 <div className="text-sm text-slate-400 mb-2">{isID ? 'Harga Normal' : 'Normal Price'}</div>
                 <div className="text-3xl font-bold text-slate-400 line-through mb-4">Rp 436.000</div>
                 <div className="text-sm text-yellow-400 mb-2">{isID ? 'Harga Hari Ini Saja:' : 'Today\'s Price Only:'}</div>
-                <div className="text-5xl md:text-6xl font-bold text-yellow-400 mb-2">Rp 49.000</div>
-                <div className="text-sm text-slate-400">{isID ? 'Hemat 89%!' : 'Save 89%!'}</div>
+                <div className="text-5xl md:text-6xl font-bold text-yellow-400 mb-2">Rp 99.000</div>
+                <div className="text-sm text-slate-400">{isID ? 'Hemat 77%!' : 'Save 77%!'}</div>
               </div>
             </div>
 
             {/* Scarcity */}
             <div className="bg-red-600 text-white p-4 rounded-lg mb-8">
               <p className="font-bold text-lg">
-                {isID ? '⏰ Harga Rp 49.000 hanya hari ini!' : '⏰ Rp 49,000 price today only!'}
+                {isID ? '⏰ Harga Rp 99.000 hanya hari ini!' : '⏰ Rp 99,000 price today only!'}
               </p>
               <p className="text-sm opacity-90">
                 {isID ? 'Kuota terbatas 50 orang. Besok naik ke Rp 199.000.' : 'Limited to 50 people. Tomorrow increases to Rp 199,000.'}
@@ -513,7 +513,7 @@ export default function EbookSuamiSejati({ locale }: { locale: Locale }) {
               onClick={() => handleCTAClick('offer')}
               className="inline-flex items-center gap-3 px-10 py-5 bg-yellow-500 hover:bg-yellow-400 text-slate-900 font-bold text-xl rounded-full transition-all transform hover:scale-105 shadow-2xl hover:shadow-yellow-500/50 mb-6"
             >
-              {isID ? '🔥 Ambil Sekarang — Rp 49.000' : '🔥 Get Now — Rp 49,000'}
+              {isID ? '🔥 Ambil Sekarang — Rp 99.000' : '🔥 Get Now — Rp 99,000'}
             </button>
 
             <p className="text-sm text-slate-400">
@@ -583,7 +583,7 @@ export default function EbookSuamiSejati({ locale }: { locale: Locale }) {
             </button>
 
             <p className="text-sm text-slate-400 mb-8">
-              {isID ? '⏰ Harga Rp 49.000 berakhir hari ini · 50 kuota tersisa' : '⏰ Rp 49,000 price ends today · 50 slots remaining'}
+              {isID ? '⏰ Harga Rp 99.000 berakhir hari ini · 50 kuota tersisa' : '⏰ Rp 99,000 price ends today · 50 slots remaining'}
             </p>
 
             <div className="inline-flex items-center gap-2 text-sm text-slate-400">
