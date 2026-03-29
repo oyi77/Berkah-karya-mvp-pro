@@ -637,6 +637,7 @@ export const dpCatalog = [
   { emoji: '🛍️', name: 'SellPix AI (Studio Pro)', category: 'Bisnis', desc: 'Foto produk setara studio profesional — dari HP kamu, dalam hitungan detik.', price: 'Rp 75.000', href: `${STORE}` },
   { emoji: '📚', name: 'Guru Pintar AI', category: 'Edukasi', desc: 'RPP 1 semester selesai dalam satu sore — guru bisa fokus ke hal yang lebih penting.', price: 'Rp 75.000', href: `${STORE}` },
   { emoji: '👶', name: 'Panduan Parenting 0–6', category: 'Personal', desc: 'Dukung tumbuh kembang si kecil dengan cara yang benar — berbasis riset, mudah dipraktikkan.', price: 'Rp 49.000', href: `${STORE}` },
+  { emoji: '❤️', name: 'Ebook Suami Sejati', category: 'Personal', desc: 'Panduan lengkap membangun keharmonisan rumah tangga — komunikasi, kedekatan, dan kepercayaan diri sebagai suami.', price: 'Rp 49.000', href: 'https://lynk.id/jendralbot/l7qdy174d73d/checkout' },
 ];
 
 // Legacy compat export (simple version for non-full pages)
